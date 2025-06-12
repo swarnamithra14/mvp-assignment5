@@ -25,7 +25,7 @@ export default function Home() {
               View Seedling Stock
             </a>
           </Link>
-          <Link href="/reviews">
+          <Link href="/review">
             <a className="px-6 py-2 bg-pink-500 text-white rounded hover:bg-pink-600 transition">
               Customer Reviews
             </a>
