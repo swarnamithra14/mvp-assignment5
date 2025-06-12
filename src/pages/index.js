@@ -13,12 +13,21 @@ export default function Home() {
           <Link href="/product">
             <a className="px-6 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition">
               Product
-      
             </a>
           </Link>
           <Link href="/about">
             <a className="px-6 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600 transition">
               About Mitti Mithra
+            </a>
+          </Link>
+          <Link href="/stock">
+            <a className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
+              View Seedling Stock
+            </a>
+          </Link>
+          <Link href="/reviews">
+            <a className="px-6 py-2 bg-pink-500 text-white rounded hover:bg-pink-600 transition">
+              Customer Reviews
             </a>
           </Link>
         </div>
