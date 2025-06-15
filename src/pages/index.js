@@ -1,4 +1,6 @@
 import Link from "next/link";
+import SeedlingList from "@/components/SeedlingList";
+import FertilizerInventory from "@/components/FertilizerInventory";
 
 export default function Home() {
   return (
@@ -14,6 +16,9 @@ export default function Home() {
               </li>
               <li>
                 <Link href="/chat" className="hover:text-green-300">Ask AI</Link>
+              </li>
+              <li>
+                <Link href="/product" className="hover:text-green-300">Products</Link>
               </li>
               <li>
                 <Link href="/about" className="hover:text-green-300">About</Link>
@@ -32,13 +37,19 @@ export default function Home() {
           Mitti Mithra helps farmers with expert advice on papaya and banana cultivation, seasonal tips, and more — powered by OpenAI.
         </p>
 
-        {/* 🌟 Here's the Ask a Question button */}
+        {/* Ask a Question Button */}
         <div className="mt-8">
           <Link href="/chat">
             <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full shadow-lg transition-all">
               Ask a Question
             </button>
           </Link>
+        </div>
+
+        {/* Inventory Components */}
+        <div className="mt-16 container mx-auto grid md:grid-cols-2 gap-8 text-left">
+          <SeedlingList />
+          <FertilizerInventory />
         </div>
       </main>
 
