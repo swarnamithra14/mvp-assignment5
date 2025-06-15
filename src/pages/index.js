@@ -1,37 +1,51 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div>
-      <div className="container mx-auto text-center p-8 bg-white rounded-lg shadow-lg">
-        <h1 className="text-4xl font-bold text-green-800 mb-6">🌱 Welcome to Mitti Mithra</h1>
-        <p className="text-gray-700 mb-8">
-          Supporting farmers with high-quality papaya and banana seedlings. Grow with us!
+    <div className="min-h-screen bg-gradient-to-br from-yellow-50 to-white font-sans">
+      {/* Navbar */}
+      <header className="bg-green-700 text-white py-4 shadow-md">
+        <div className="container mx-auto px-6 flex justify-between items-center">
+          <h1 className="text-2xl font-bold">🌱 Mitti Mithra</h1>
+          <nav>
+            <ul className="flex gap-6">
+              <li>
+                <Link href="/" className="hover:text-green-300">Home</Link>
+              </li>
+              <li>
+                <Link href="/chat" className="hover:text-green-300">Ask AI</Link>
+              </li>
+              <li>
+                <Link href="/about" className="hover:text-green-300">About</Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      {/* Hero Section */}
+      <main className="text-center py-20 px-6">
+        <h2 className="text-4xl font-bold text-green-800 mb-4">
+          Your AI Companion for Farming Solutions
+        </h2>
+        <p className="text-gray-700 max-w-2xl mx-auto text-lg">
+          Mitti Mithra helps farmers with expert advice on papaya and banana cultivation, seasonal tips, and more — powered by OpenAI.
         </p>
 
-        <div className="space-x-4">
-          <Link href="/product">
-            <a className="px-6 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition">
-              Product
-            </a>
-          </Link>
-          <Link href="/about">
-            <a className="px-6 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600 transition">
-              About Mitti Mithra
-            </a>
-          </Link>
-          <Link href="/stock">
-            <a className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
-              View Seedling Stock
-            </a>
-          </Link>
-          <Link href="/review">
-            <a className="px-6 py-2 bg-pink-500 text-white rounded hover:bg-pink-600 transition">
-              Customer Reviews
-            </a>
+        {/* 🌟 Here's the Ask a Question button */}
+        <div className="mt-8">
+          <Link href="/chat">
+            <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full shadow-lg transition-all">
+              Ask a Question
+            </button>
           </Link>
         </div>
-      </div>
+      </main>
+
+      {/* Footer */}
+      <footer className="text-center text-sm text-gray-600 py-6 border-t mt-12">
+        © 2025 Mitti Mithra. Made with ❤️ for Indian farmers.
+      </footer>
     </div>
   );
 }
