@@ -46,11 +46,18 @@ export default function Home() {
           </Link>
         </div>
 
-        {/* Inventory Components */}
-        <div className="mt-16 container mx-auto grid md:grid-cols-2 gap-8 text-left">
-          <SeedlingList />
-          <FertilizerInventory />
-        </div>
+        {/* Inventory Section */}
+        <section className="mt-20 container mx-auto px-4">
+          <h3 className="text-2xl font-bold text-green-700 mb-6 text-left">🌾 Inventory Overview</h3>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <SeedlingList />
+            </div>
+            <div>
+              <FertilizerInventory />
+            </div>
+          </div>
+        </section>
       </main>
 
       {/* Footer */}
